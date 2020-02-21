@@ -44,7 +44,7 @@ def log_debug(msg):
     print(msg, file=sys.stderr)
 
 def get_tweets(twitter, screen_name, max_id=None):
-    kwargs = dict(count=3200, screen_name=screen_name)
+    kwargs = dict(count=3200, screen_name=screen_name, tweet_mode="extended")
     if max_id:
         kwargs['max_id'] = max_id
 
