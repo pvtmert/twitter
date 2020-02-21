@@ -59,7 +59,7 @@ def get_tweets(twitter, screen_name, max_id=None):
         if tweet.get('in_reply_to_status_id'):
             print("In-Reply-To: %s" % tweet['in_reply_to_status_id'])
         print()
-        for line in tweet['text'].splitlines():
+        for line in tweet['full_text'].splitlines():
             printNicely('    ' + line + '\n')
         print()
         print()
